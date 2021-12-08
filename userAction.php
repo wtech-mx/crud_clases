@@ -1,4 +1,5 @@
 <?php
+@include('./estilos.php');
 //start session
 session_start();
 

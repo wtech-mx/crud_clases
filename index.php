@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 <?php
+@include('./estilos.php');
 //start session
 session_start();
 
@@ -48,7 +49,7 @@ if (!empty($sessData['status']['msg'])) {
                                 <td><?php echo $user['name']; ?></td>
                                 <td><?php echo $user['email']; ?></td>
                                 <td>
-                                    <<?php echo $user['phone']; ?>< /td>
+                                    <?php echo $user['phone']; ?>
                                 <td>
                                     <a href="addEdit.php?id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-edit"></a>
                                     <a href="userAction.php?action_type=delete&id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete?')"></a>
