@@ -1,9 +1,8 @@
 
 <?php
-@include('./estilos.php');
 //start session
 session_start();
-
+@include('./estilos.php');
 //get session data
 $sessData = !empty($_SESSION['sessData']) ? $_SESSION['sessData'] : '';
 
