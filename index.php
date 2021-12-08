@@ -1,8 +1,9 @@
 
 <?php
-@include('./estilos.php');
+
 //start session
 session_start();
+@include('./estilos.php');
 
 //get session data
 $sessData = !empty($_SESSION['sessData']) ? $_SESSION['sessData'] : '';
@@ -51,7 +52,9 @@ if (!empty($sessData['status']['msg'])) {
                                 <td>
                                     <?php echo $user['phone']; ?>
                                 <td>
-                                    <a href="addEdit.php?id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-edit"></a>
+                                    <a href="addEdit.php?id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-edit"><address>
+                                    
+                                    </address></a>
                                     <a href="userAction.php?action_type=delete&id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete?')"></a>
                                 </td>
                             </tr>

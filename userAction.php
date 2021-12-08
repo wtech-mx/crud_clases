@@ -1,7 +1,8 @@
 <?php
-@include('./estilos.php');
+
 //start session
 session_start();
+@include('./estilos.php');
 
 //load and initialize database class
 require_once 'DB.class.php';
