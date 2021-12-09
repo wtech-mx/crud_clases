@@ -1,26 +1,33 @@
 <?php
-
 //start session
 session_start();
-@include('./estilos.php');
 
 //load and initialize database class
 require_once 'DB.class.php';
 $db = new DB();
 
-$tblName = 'users';
+$tblName = 'cporte_tvehiculos';
 
 //set default redirect url
 $redirectURL = 'index.php';
 
 if(isset($_POST['userSubmit'])){
-    if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['phone'])){
+    if(!empty($_POST['placa'])){
         if(!empty($_POST['id'])){
             //update data
             $userData = array(
-                'name' => $_POST['name'],
-                'email' => $_POST['email'],
-                'phone' => $_POST['phone']
+                'placa' => $_POST['placa'],
+                'anio' => $_POST['anio'],
+                'tipo' => $_POST['tipo'],
+                'permisosct' => $_POST['permisosct'],
+                'numeropermisosct' => $_POST['numeropermisosct'],
+                'nombreaseguradoraresponsabilidadcivil' => $_POST['nombreaseguradoraresponsabilidadcivil'],
+                'numeropolizaresponsabilidadcivil' => $_POST['numeropolizaresponsabilidadcivil'],
+                'nombreaseguradoracarga' => $_POST['nombreaseguradoracarga'],
+                'numeropolizacarga' => $_POST['numeropolizacarga'],
+                'nombreaseguradoramedioambiente' => $_POST['nombreaseguradoramedioambiente'],
+                'numeropolizamedioambiente' => $_POST['numeropolizamedioambiente'],
+                'primaseguro' => $_POST['primaseguro']
             );
             $condition = array('id' => $_POST['id']);
             $update = $db->update($tblName, $userData, $condition);
@@ -37,9 +44,18 @@ if(isset($_POST['userSubmit'])){
         }else{
             //insert data
             $userData = array(
-                'name' => $_POST['name'],
-                'email' => $_POST['email'],
-                'phone' => $_POST['phone']
+                'placa' => $_POST['placa'],
+                'anio' => $_POST['anio'],
+                'tipo' => $_POST['tipo'],
+                'permisosct' => $_POST['permisosct'],
+                'numeropermisosct' => $_POST['numeropermisosct'],
+                'nombreaseguradoraresponsabilidadcivil' => $_POST['nombreaseguradoraresponsabilidadcivil'],
+                'numeropolizaresponsabilidadcivil' => $_POST['numeropolizaresponsabilidadcivil'],
+                'nombreaseguradoracarga' => $_POST['nombreaseguradoracarga'],
+                'numeropolizacarga' => $_POST['numeropolizacarga'],
+                'nombreaseguradoramedioambiente' => $_POST['nombreaseguradoramedioambiente'],
+                'numeropolizamedioambiente' => $_POST['numeropolizamedioambiente'],
+                'primaseguro' => $_POST['primaseguro']
             );
             $insert = $db->insert($tblName, $userData);
             if($insert){

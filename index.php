@@ -1,10 +1,8 @@
 
 <?php
-
 //start session
 session_start();
-@include('./estilos.php');
-
+include('./estilos.php');
 //get session data
 $sessData = !empty($_SESSION['sessData']) ? $_SESSION['sessData'] : '';
 
@@ -13,7 +11,7 @@ require_once 'DB.class.php';
 $db = new DB();
 
 //get users from database
-$users = $db->getRows('users', array('order_by' => 'id DESC'));
+$users = $db->getRows('cporte_tvehiculos', array('order_by' => 'id DESC'));
 
 //get status message from session
 if (!empty($sessData['status']['msg'])) {
@@ -32,14 +30,23 @@ if (!empty($sessData['status']['msg'])) {
     <div class="row">
         <div class="panel panel-default users-content">
             <div class="panel-heading">Users <a href="addEdit.php" class="glyphicon glyphicon-plus"></a></div>
-            <table class="table table-striped">
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Action</th>
+						<th class='text-center'>Placa</th>
+						<th class='text-center'>Año </th>
+						<th class='text-center'>Tipo </th>
+						<th class='text-center'>Permiso SCT</th>
+						<th class='text-center'># Permiso</th>
+						<th class='text-center'>Aseguradora resp. civil</th>
+                        <th class='text-center'># Poliza resp. civil</th>
+						<th class='text-center'>Aseguradora de la carga</th>
+						<th class='text-center'># Póliza de la carga</th>
+						<th class='text-center'>Aseguradora del medio ambiente</th>
+						<th class='text-center'># Póliza medio ambiente</th>
+						<th class='text-center'>Prima del seguro</th>
+						<th></th>
                     </tr>
                 </thead>
                 <tbody id="userData">
@@ -47,14 +54,20 @@ if (!empty($sessData['status']['msg'])) {
                         foreach ($users as $user) : $count++; ?>
                             <tr>
                                 <td><?php echo '#' . $count; ?></td>
-                                <td><?php echo $user['name']; ?></td>
-                                <td><?php echo $user['email']; ?></td>
+                                <td><?php echo $user['placa']; ?></td>
+                                <td><?php echo $user['anio']; ?></td>
+                                <td><?php echo $user['tipo']; ?></td>
+                                <td><?php echo $user['permisosct']; ?></td>
+                                <td><?php echo $user['numeropermisosct']; ?></td>
+                                <td><?php echo $user['nombreaseguradoraresponsabilidadcivil']; ?></td>
+                                <td><?php echo $user['numeropolizaresponsabilidadcivil']; ?></td>
+                                <td><?php echo $user['nombreaseguradoracarga']; ?></td>
+                                <td><?php echo $user['numeropolizacarga']; ?></td>
+                                <td><?php echo $user['nombreaseguradoramedioambiente']; ?></td>
+                                <td><?php echo $user['numeropolizamedioambiente']; ?></td>
+                                <td><?php echo $user['primaseguro']; ?></td>
                                 <td>
-                                    <?php echo $user['phone']; ?>
-                                <td>
-                                    <a href="addEdit.php?id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-edit"><address>
-                                    
-                                    </address></a>
+                                    <a href="addEdit.php?id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-edit"></a>
                                     <a href="userAction.php?action_type=delete&id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete?')"></a>
                                 </td>
                             </tr>
@@ -69,3 +82,8 @@ if (!empty($sessData['status']['msg'])) {
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>

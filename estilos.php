@@ -8,13 +8,15 @@
    <title>Syserv e-Fac | Autenticación</title>
    <!---------- SISTEMA ------> 
    <!-- Estilos --> 
-   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback"> 
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <link type="text/css" href="https://www.sistemasyservicios.mx/efac/recursos/css/adminlte.min.css" rel="stylesheet" >
    <link type="text/css" href="https://www.sistemasyservicios.mx/efac/recursos/css/paginasAdmin41be.css?v=1.0.29" rel="stylesheet">
    <link type="text/css" href="https://www.sistemasyservicios.mx/efac/recursos/css/styleCabeceraPieSistema6ee9.css?v=1.0.47" rel="stylesheet"> 
    <link type="text/css" href="https://www.sistemasyservicios.mx/efac/recursos/plugins/fontawesome-free/css/all.min.css" rel="stylesheet">  
+
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap.min.css">
    <!-- Libreria Framework --> 
    <!-- <script type="text/javascript" src="https://www.sistemasyservicios.mx/efac/recursos/js/jquery-1.10.2.min.js"></script> 
    <script type="text/javascript" src="https://www.sistemasyservicios.mx/efac/recursos/js/bootstrap.mine209.js?v=1.0.0"></script> 
@@ -46,9 +48,8 @@
    <script src="https://www.sistemasyservicios.mx/efac/recursos/js/ui/jquery.ui.effect.js"></script>
    <script src="https://www.sistemasyservicios.mx/efac/recursos/js/ui/jquery.ui.datepicker.js"></script>
    <script src="https://www.sistemasyservicios.mx/efac/recursos/js/jquery.scrollTo-1.4.2-min.js"></script>
-   
-   <link type="text/css" href="recursos/css/style2c70.css?v=1.0.3" rel="stylesheet">
-   <link type="text/css" href="recursos/css/Formulario.css" rel="stylesheet">
-   <script type="text/javascript" src="recursos/js/functions.js"></script> 
 
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap.min.js"></script>
     </head> 

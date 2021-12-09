@@ -6,12 +6,12 @@
  * @url        http://www.codexworld.com
  * @license    http://www.codexworld.com/license
  */
-class DB
-{
+    class DB
+    {
     private $dbHost     = "localhost";
     private $dbUsername = "root";
     private $dbPassword = "";
-    private $dbName     = "programacionnet";
+    private $dbName     = "test_updateprod";
 
     public function __construct()
     {
@@ -90,12 +90,6 @@ class DB
             $columns = '';
             $values  = '';
             $i = 0;
-            if (!array_key_exists('created', $data)) {
-                $data['created'] = date("Y-m-d H:i:s");
-            }
-            if (!array_key_exists('modified', $data)) {
-                $data['modified'] = date("Y-m-d H:i:s");
-            }
             foreach ($data as $key => $val) {
                 $pre = ($i > 0) ? ', ' : '';
                 $columns .= $pre . $key;
@@ -122,9 +116,6 @@ class DB
             $colvalSet = '';
             $whereSql = '';
             $i = 0;
-            if (!array_key_exists('modified', $data)) {
-                $data['modified'] = date("Y-m-d H:i:s");
-            }
             foreach ($data as $key => $val) {
                 $pre = ($i > 0) ? ', ' : '';
                 $colvalSet .= $pre . $key . "='" . $val . "'";
