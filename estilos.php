@@ -16,7 +16,7 @@
    <link type="text/css" href="https://www.sistemasyservicios.mx/efac/recursos/css/styleCabeceraPieSistema6ee9.css?v=1.0.47" rel="stylesheet"> 
    <link type="text/css" href="https://www.sistemasyservicios.mx/efac/recursos/plugins/fontawesome-free/css/all.min.css" rel="stylesheet">  
 
-   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
    <!-- Libreria Framework --> 
    <!-- <script type="text/javascript" src="https://www.sistemasyservicios.mx/efac/recursos/js/jquery-1.10.2.min.js"></script> 
    <script type="text/javascript" src="https://www.sistemasyservicios.mx/efac/recursos/js/bootstrap.mine209.js?v=1.0.0"></script> 
@@ -51,5 +51,4 @@
 
    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap.min.js"></script>
     </head> 

@@ -101,149 +101,142 @@
 
 <div class="container">
 
+<div class="row">       
 
+        <form method="post" action="userAction.php" class="form">
+            <section class="form-intern" style="max-width:1120px; margin-top:0px; display:inline-block;">
 
-<div class="row">
-
-           
-
-                <form method="post" action="userAction.php" class="form">
-                    <section class="form-intern" style="max-width:1120px; margin-top:0px; display:inline-block;">
-
-                        <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">R.F.C.</label>
-                                <div class="col-sm-3">
-                                    <input type="text" class="form-control" name="" value="">
-                                </div>
-
-                                <label class="col-sm-2 col-form-label">Nombre o razón social: </label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="anio" value="">
-                                </div>
-                        </div>
-                                            
-
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">CURP</label>
-                                <div class="col-sm-2">
-                                    <input type="text" class="form-control" name="" value="">
-                                </div>
-
-                                <label class="col-sm-2 col-form-label">Tax Id</label>
-                                <div class="col-sm-2">
-                                    <input type="text" class="form-control" name="" value="">
-                                </div>
-
-                                <label class="col-sm-2 col-form-label">No. Licencia</label>
-                                <div class="col-sm-2">
-                                    <input type="text" class="form-control" name="" value="">
-                                </div>
-                        </div>                                                             
-
-                    </section>
-
-                    <section class="form-intern" style="max-width:1120px; margin-top:0px; display:inline-block;">
-                        <div class="row">
-
-                            <div class="col-6">
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Correo</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Calle</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Número Exterior:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Número Interior:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">País</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Código Postal:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col-6">
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Estado</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Municipio</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Localidad</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Colonia:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Referencia</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="" value="">
-                                    </div>
-                                </div>
-
-                            </div>
-
+                <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">R.F.C.</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="rfc" value="">
                         </div>
 
-                    </section>
+                        <label class="col-sm-2 col-form-label">Nombre o razón social: </label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="nombre_razon" value="">
+                        </div>
+                </div>
+                                    
 
-                    <input type="hidden" name="id" value="">
-                    <input type="submit" name="userSubmit" class="btn btn-success" value="Guardar" />
-                    
-                </form>
-           
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">CURP</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="curp" value="">
+                        </div>
+
+                        <label class="col-sm-2 col-form-label">Tax Id</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="tax_id" value="">
+                        </div>
+
+                        <label class="col-sm-2 col-form-label">No. Licencia</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="no_licencia" value="">
+                        </div>
+                </div>                                                             
+
+            </section>
+
+            <section class="form-intern" style="max-width:1120px; margin-top:0px; display:inline-block;">
+                <div class="row">
+
+                    <div class="col-6">
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Correo</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="email" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Calle</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="calle" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Número Exterior:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="no_exterior" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Número Interior:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="no_interior" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">País</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="pais" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Código Postal:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="cp" value="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Estado</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="estado" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Municipio</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="municipio" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Localidad</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="localidad" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Colonia:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="colonia" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Referencia</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="referencia" value="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <input type="hidden" name="id" value="">
+            <input type="submit" name="userSubmit" class="btn btn-success" value="Guardar" />
+            
+        </form>
+   
 
 </div>
-
-
-
     
 </body>
 </html>

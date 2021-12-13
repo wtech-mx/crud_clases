@@ -59,10 +59,11 @@ if (!empty($sessData['status']['msg'])) {
                             Transporte 
                             <a href="addEdit.php" class="glyphicon glyphicon-plus"></a>
                     </div>
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
-                            <thead>
+                        <table id="example" class="hover" style="width:100%">
+                            <thead style="background-color: #f5f5f5">
                                 <tr>
                                     <th></th>
+                                    <th>Editar</th>
                                     <th class='text-center'>Placa</th>
                                     <th class='text-center'>Año </th>
                                     <th class='text-center'>Tipo </th>
@@ -75,14 +76,18 @@ if (!empty($sessData['status']['msg'])) {
                                     <th class='text-center'>Aseguradora del medio ambiente</th>
                                     <th class='text-center'># Póliza medio ambiente</th>
                                     <th class='text-center'>Prima del seguro</th>
-                                    <th></th>
+                                    
                                 </tr>
                             </thead>
                             <tbody id="userData">
                                 <?php if (!empty($register)) : $count = 0;
                                     foreach ($register as $transporte) : $count++; ?>
                                         <tr>
-                                            <td><?php echo '#' . $count; ?></td>
+                                            <td><?php echo $count; ?></td>
+                                            <td>
+                                                <a href="addEdit.php?id=<?php echo $transporte['id']; ?>" class="glyphicon glyphicon-edit" style="color: #868686"></a>
+                                                <a href="userAction.php?action_type=delete&id=<?php echo $transporte['id']; ?>" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete?')" style="color: #868686"></a>
+                                            </td>
                                             <td><?php echo $transporte['placa']; ?></td>
                                             <td><?php echo $transporte['anio']; ?></td>
                                             <td><?php echo $transporte['tipo']; ?></td>
@@ -95,10 +100,7 @@ if (!empty($sessData['status']['msg'])) {
                                             <td><?php echo $transporte['nombreaseguradoramedioambiente']; ?></td>
                                             <td><?php echo $transporte['numeropolizamedioambiente']; ?></td>
                                             <td><?php echo $transporte['primaseguro']; ?></td>
-                                            <td>
-                                                <a href="addEdit.php?id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-edit"></a>
-                                                <a href="userAction.php?action_type=delete&id=<?php echo $user['id']; ?>" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete?')"></a>
-                                            </td>
+
                                         </tr>
                                     <?php endforeach;
                                 else : ?>
