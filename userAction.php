@@ -33,10 +33,10 @@ if(isset($_POST['userSubmit'])){
             $update = $db->update($tblName, $userData, $condition);
             if($update){
                 $sessData['status']['type'] = 'success';
-                $sessData['status']['msg'] = 'User data has been updated successfully.';
+                $sessData['status']['msg'] = 'Los datos del usuario se han actualizado correctamente.';
             }else{
                 $sessData['status']['type'] = 'error';
-                $sessData['status']['msg'] = 'Some problem occurred, please try again.';
+                $sessData['status']['msg'] = 'Ocurrió algún problema, inténtelo de nuevo.';
                 
                 //set redirect url
                 $redirectURL = 'addEdit.php';
@@ -60,10 +60,10 @@ if(isset($_POST['userSubmit'])){
             $insert = $db->insert($tblName, $userData);
             if($insert){
                 $sessData['status']['type'] = 'success';
-                $sessData['status']['msg'] = 'User data has been added successfully.';
+                $sessData['status']['msg'] = 'Los datos del usuario se han agregado correctamente.';
             }else{
                 $sessData['status']['type'] = 'error';
-                $sessData['status']['msg'] = 'Some problem occurred, please try again.';
+                $sessData['status']['msg'] = 'Ocurrió algún problema, inténtelo de nuevo.';
                 
                 //set redirect url
                 $redirectURL = 'addEdit.php';
@@ -71,7 +71,7 @@ if(isset($_POST['userSubmit'])){
         }
     }else{
         $sessData['status']['type'] = 'error';
-        $sessData['status']['msg'] = 'All fields are mandatory, please fill all the fields.';
+        $sessData['status']['msg'] = 'Todos los campos son obligatorios, por favor complete todos los campos.';
         
         //set redirect url
         $redirectURL = 'addEdit.php';
@@ -88,10 +88,10 @@ if(isset($_POST['userSubmit'])){
     $delete = $db->delete($tblName, $condition);
     if($delete){
         $sessData['status']['type'] = 'success';
-        $sessData['status']['msg'] = 'User data has been deleted successfully.';
+        $sessData['status']['msg'] = 'Los datos del usuario se han eliminado correctamente.';
     }else{
         $sessData['status']['type'] = 'error';
-        $sessData['status']['msg'] = 'Some problem occurred, please try again.';
+        $sessData['status']['msg'] = 'Ocurrió algún problema, inténtelo de nuevo.';
     }
     
     //store status into the session

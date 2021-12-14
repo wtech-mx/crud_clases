@@ -20,6 +20,17 @@ if (isset($_POST['userSubmit'])) {
                 'nombre_razon' => $_POST['nombre_razon'],
                 'curp' => $_POST['curp'],
                 'tax_id' => $_POST['tax_id'],
+                'email' => $_POST['email'],
+                'calle' => $_POST['calle'],
+                'no_exterior' => $_POST['no_exterior'],
+                'no_interior' => $_POST['no_interior'],
+                'pais' => $_POST['pais'],
+                'cp' => $_POST['cp'],
+                'estado' => $_POST['estado'],
+                'municipio' => $_POST['municipio'],
+                'localidad' => $_POST['localidad'],
+                'colonia' => $_POST['colonia'],
+                'referencia' => $_POST['referencia'],
                 'no_licencia' => $_POST['no_licencia']
             );
             $condition = array('id' => $_POST['id']);
@@ -41,6 +52,17 @@ if (isset($_POST['userSubmit'])) {
                 'nombre_razon' => $_POST['nombre_razon'],
                 'curp' => $_POST['curp'],
                 'tax_id' => $_POST['tax_id'],
+                'email' => $_POST['email'],
+                'calle' => $_POST['calle'],
+                'no_exterior' => $_POST['no_exterior'],
+                'no_interior' => $_POST['no_interior'],
+                'pais' => $_POST['pais'],
+                'cp' => $_POST['cp'],
+                'estado' => $_POST['estado'],
+                'municipio' => $_POST['municipio'],
+                'localidad' => $_POST['localidad'],
+                'colonia' => $_POST['colonia'],
+                'referencia' => $_POST['referencia'],
                 'no_licencia' => $_POST['no_licencia']
             );
             $insert = $db->insert($tblName, $userData);
@@ -77,7 +99,7 @@ if (isset($_POST['userSubmit'])) {
         $sessData['status']['msg'] = 'User data has been deleted successfully.';
     } else {
         $sessData['status']['type'] = 'error';
-        $sessData['status']['msg'] = 'Some problem occurred, please try again.';
+        $sessData['status']['msg'] = 'Por favor Verifique los siguientes datos:';
     }
 
     //store status into the session

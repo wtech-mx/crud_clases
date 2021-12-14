@@ -51,4 +51,12 @@
 
    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+   <script	script src="https://cfdi.facturoporti.com.mx/Scripts/modernizr-2.8.3.js" type="text/javascript"></script>
+
+
+<script src="https://cfdi.facturoporti.com.mx/Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="https://cfdi.facturoporti.com.mx/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script src="https://cfdi.facturoporti.com.mx/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+   
     </head> 
